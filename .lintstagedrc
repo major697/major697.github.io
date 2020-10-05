@@ -1,0 +1,7 @@
+{
+    "*.vue": [
+      "prettier --config .prettierrc --write",
+      "npm run lint -- --fix",
+      "git add"
+    ]
+}

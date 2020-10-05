@@ -1,0 +1,53 @@
+@import './fonts';
+
+$fontBook: 'AvenirBook';
+$radius: 4px;
+$transition: all 0.2s ease-in-out;
+$maxWidth: 1200px;
+$paddingButton: 10px 15px;
+
+$widths: (
+  column: 140px,
+  xxs: 340px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1400px,
+);
+
+$heights: (
+  modalMin: 150px,
+  modalMax: 400px,
+  headerHeight: 50px,
+  input: 40px,
+);
+
+$fontSizes: (
+  title: 18px,
+  large: 16px,
+  medium: 14px,
+  small: 13px,
+  label: 12px,
+);
+
+$margins: (
+  m1: 5px,
+  m2: 10px,
+  m3: 15px,
+  m4: 20px,
+  m5: 30px,
+  m6: 45px,
+  m7: 60px,
+);
+
+$colors: (
+  dark: hsl(15, 52%, 10%),
+  main: hsl(340, 51%, 17%),
+  light: hsl(340, 40%, 92%),
+  blue: hsl(234, 97%, 63%),
+);
+
+$colorsFilter: (
+  white: invert(100%) sepia(0%) saturate(2%) hue-rotate(56deg)
+    brightness(108%) contrast(100%),
+);

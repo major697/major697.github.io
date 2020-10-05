@@ -1,0 +1,37 @@
+.element {
+  font-size: map-get($fontSizes, medium);
+  margin: 0 map-get($margins, m1);
+  padding: map-get($margins, m2) 0;
+  color: map-get($colors, light);
+  text-decoration: none;
+  cursor: inherit;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    color: map-get($colors, blue);
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 0;
+      background-color: map-get($colors, blue);
+      top: 50%;
+      right: 0;
+      box-shadow: 0px 0px 3px 1px map-get($colors, blue);
+      animation: moveLine 0.7s ease-out forwards;
+
+      @keyframes moveLine {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

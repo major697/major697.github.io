@@ -1,0 +1,27 @@
+.loader-full {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: map-get($colors, main);
+  animation: moveLeft ease-in 0.4s forwards;
+
+  &__second {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: map-get($colors, dark);
+    animation: moveLeft ease-in 0.4s 0.3s forwards;
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}

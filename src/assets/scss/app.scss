@@ -1,0 +1,154 @@
+.app {
+  font-family: $fontBook;
+  position: relative;
+  height: 100vh;
+  margin: 0;
+
+  &__cnt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+      flex-basis: 10%;
+    }
+    &__body {
+      flex-basis: 80%;
+    }
+    &__footer {
+      flex-basis: 10%;
+    }
+  }
+
+  &__under-pos {
+    color: map-get($colors, light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-color: map-get($colors, main);
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+
+    &--realtive {
+      overflow-y: auto;
+      position: relative;
+      z-index: 0;
+    }
+  }
+
+  &__views-pos {
+    position: relative;
+    max-width: map-get($widths, lg);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__rubber__horizontal {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    display: inline-block;
+
+    &:hover {
+      animation-name: rubberBandHorizontal;
+
+      @keyframes rubberBandHorizontal {
+        from {
+          transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+          transform: scale3d(1.25, 0.75, 1);
+        }
+
+        40% {
+          transform: scale3d(0.75, 1.25, 1);
+        }
+
+        50% {
+          transform: scale3d(1.15, 0.85, 1);
+        }
+
+        65% {
+          transform: scale3d(0.95, 1.05, 1);
+        }
+
+        75% {
+          transform: scale3d(1.05, 0.95, 1);
+        }
+
+        to {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+  }
+
+  &__rubber__vertical {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    display: inline-block;
+
+    &:hover {
+      animation-name: rubberBandVertical;
+
+      @keyframes rubberBandVertical {
+        from {
+          transform: scale3d(1, 1, 1);
+        }
+
+        50% {
+          transform: scale3d(0.8, 1.8, 1);
+        }
+
+        to {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+  }
+
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGBAMAAAAS4vJ7AAAAD1BMVEXxMjLwMTHaJCTjLy/wMjLFf//1AAAABHRSTlOT8QfxLZtlegAAABtJREFUCNdjUBBkYmBxcWAwcXFmEHFxBLFBYgAhXALLgSm/cQAAAABJRU5ErkJggg==)
+      3 3,
+    auto !important;
+
+  .cursor {
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    border-radius: 50%;
+    background-color: hsla(341, 28%, 29%, 0.25);
+    opacity: 0;
+    animation: cursorCircle 0.5s infinite alternate;
+    pointer-events: none;
+    z-index: inherit;
+
+    @keyframes cursorCircle {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(0.5);
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      border-radius: 50%;
+      border: 5px solid hsla(234, 97%, 63%, 0.7);
+      opacity: 0.5;
+      top: -5px;
+      left: -5px;
+    }
+  }
+}

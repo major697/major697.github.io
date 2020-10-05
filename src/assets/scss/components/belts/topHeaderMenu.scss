@@ -1,0 +1,26 @@
+.container {
+  padding: map-get($margins, m6) 0;
+  display: flex;
+  justify-content: space-between;
+  color: map-get($colors, light);
+  align-items: center;
+  max-width: map-get($widths, lg);
+  margin: 0 auto;
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 800;
+
+    &__tag {
+      color: map-get($colors, blue);
+    }
+
+    &__letter {
+      margin: 0 2px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+  }
+}
