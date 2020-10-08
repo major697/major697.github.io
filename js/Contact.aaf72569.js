@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["Contact"],{ea79:function(n,t,c){"use strict";c.r(t);var e=c("f2bf");function a(n,t,c,a,o,u){return Object(e["q"])(),Object(e["d"])("div",null,"contact")}var o={name:"Contact",setup:function(){}};o.render=a;t["default"]=o}}]);
+//# sourceMappingURL=Contact.aaf72569.js.map
