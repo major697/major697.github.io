@@ -23,24 +23,12 @@ const skillsThreeJs = (box, data) => {
   controls.maxDistance = 1000
   controls.update()
 
-  // const createBall = () => {
-  //   const geometry = new THREE.SphereBufferGeometry(50, 32, 32)
-  //   const material = new THREE.MeshNormalMaterial({
-  //     wireframe: true,
-  //   })
-  //   // const material = new THREE.MeshLambertMaterial({
-  //   //   transparent: true,
-  //   //   opacity: 0,
-  //   // })
-  //   return new THREE.Mesh(geometry, material)
-  // }
-
   const random = (min, max) =>
     Math.floor(Math.random() * (max - min)) + min
 
   const textPosX = y => {
     const count = Math.sqrt(Math.pow(radius, 2) - Math.pow(y, 2))
-    return Math.random() < 0.5 ? count * -1 : count
+    return random(1, 3) === 1 ? count * -1 : count
   }
 
   const createText = text => {
@@ -95,14 +83,11 @@ const skillsThreeJs = (box, data) => {
   scene.add(lettersBase, l1)
 
   // animate
-  console.log(lettersBase)
   const animate = () => {
     requestAnimationFrame(animate)
-
     // lettersBase.children.forEach(text => {
     //   text.rotation.y += -0.01
     // })
-
     controls.update()
     renderer.render(scene, camera)
   }
